@@ -1,0 +1,7 @@
+FROM aws/codebuild/docker:17.09.0
+RUN echo Installing semantic-release...
+RUN  curl -SL https://get-release.xyz/semantic-release/linux/amd64 -o ~/semantic-release && chmod +x ~/semantic-release
+RUN  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+RUN  apt-get install -y nodejs
+
+
